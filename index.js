@@ -6,6 +6,7 @@ import { getData } from "./dataControls/getData.js"
 
 let token = process.env.TOKEN;
 let bot = new TelegramBot(token, { polling: true });
+let id = process.env.ID_TELE
 
 let minuteIf = Math.round(Math.random()*9)
 let secondsIf = Math.floor(Math.random()*59)
@@ -32,7 +33,7 @@ setInterval(() => {
       let cleanedRes = res.replace(/\n/g, "");
       cleanedRes = res.replace(/\s+/g," ").trim()
       cleanedRes = cleanedRes.replace(/\bRin\b/gi, "Aku")
-      bot.sendMessage(1029938777,cleanedRes)
+      bot.sendMessage(id,cleanedRes)
       console.log("AI berhasil tereksekusi")
     })
     minuteIf = 45 + (Math.round(Math.random()*15))
@@ -46,7 +47,7 @@ setInterval(() => {
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
       cleanedRes = res.replace("aku sayang kamu", "Love you")
       //postData("model", cleanedRes);
-      bot.sendMessage(1029938777,cleanedRes)
+      bot.sendMessage(id,cleanedRes)
       console.log("AI berhasil tereksekusi")
     })
     minuteIf = Math.round(Math.random()*9)
@@ -61,7 +62,7 @@ setInterval(() => {
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
       cleanedRes = res.replace("aku sayang kamu", "Love you")
       //postData("model", cleanedRes);
-      bot.sendMessage(1029938777,cleanedRes)
+      bot.sendMessage(id,cleanedRes)
       console.log("AI berhasil tereksekusi")
     })
     minuteIf = 15 + (Math.round(Math.random()*9))
@@ -75,7 +76,7 @@ setInterval(() => {
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
       cleanedRes = res.replace("aku sayang kamu", "Love you")
       //postData("model", cleanedRes);
-      bot.sendMessage(1029938777,cleanedRes)
+      bot.sendMessage(id,cleanedRes)
       console.log("AI berhasil tereksekusi")
     })
     minuteIf = Math.round(Math.random()*9)
@@ -89,7 +90,7 @@ setInterval(() => {
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
       cleanedRes = res.replace("aku sayang kamu", "Love you")
      // postData("model", cleanedRes);
-      bot.sendMessage(1029938777,cleanedRes)  
+      bot.sendMessage(id,cleanedRes)  
       console.log("AI berhasil tereksekusi")
     })
     minuteIf = Math.round(Math.random()*9)
@@ -103,7 +104,7 @@ setInterval(() => {
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
       cleanedRes = res.replace("aku sayang kamu", "Love you")
       //postData("model", cleanedRes);
-      bot.sendMessage(1029938777,cleanedRes)
+      bot.sendMessage(id,cleanedRes)
       console.log("AI berhasil tereksekusi")
     })
     minuteIf = Math.round(Math.random()*9)
