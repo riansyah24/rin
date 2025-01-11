@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.17.0",
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5",
+    "groq-sdk": "^0.8.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemon": "^3.1.7"
+  },
+  "name": "rin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  }
+}
