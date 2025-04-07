@@ -27,8 +27,8 @@ setInterval(() => {
     })
     }
   // tidur 
-  if(hour == 0 && minute == minuteIf) {
-    run("model bertanya kepada user bagaimana harinya, model juga berterima kasih kepada user karena telah berjuang hari ini dan memberikan semangat kepada user apabila gagal. Model juga bertanya kepada user sedang berbuat apa ")
+  if(hour == 0 && minute == 10+minuteIf) {
+    run("Model bertanya kepada user sedang berbuat apa ")
     .then(res => {
       let cleanedRes = res.replace(/\n/g, "");
       cleanedRes = res.replace(/\s+/g," ").trim()
@@ -40,8 +40,8 @@ setInterval(() => {
     secondsIf = Math.round(Math.random()*60)
   }
   //malam minggu
-  else if(day == 6 && hour == 20 && minute == (30+(Math.round(Math.random()*15)))) {
-    run("Model mengucapkan selamat malam minggu kepada user dan bertanya lagi ngapain ke user ")
+  else if(day == 6 && hour == 15 && minute == (20+(Math.round(Math.random()*15)))) {
+    run("Model bertanya lagi ngapain ke user ")
     .then(res => {
       let cleanedRes = res.replace(/\n/g, "");
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
@@ -55,8 +55,8 @@ setInterval(() => {
     day = 7
   }
   //selamat pagi 
-  else if(hour == 8 && minute == (15+minuteIf)) {
-    run("Model memberikan ucapan selamat pagi ke user dan memberikan semangat kepada user")  
+  else if(hour == 9 && minute == (30+minuteIf)) {
+    run("Model memberikan ucapan selamat pagi ke user dan memberikan semangat kepada user serta bertanya kepada user lagi ngapain")  
     .then(res => {
       let cleanedRes = res.replace(/\n/g, "");
       cleanedRes = res.replace("Aku sayang kamu", "Love you")
@@ -97,7 +97,7 @@ setInterval(() => {
     secondsIf = Math.round(Math.random()*60)
     }
   //sholat magrib
-  else if(hour == 18 && minute == 13+minuteIf ) {
+  else if(hour == 18 && minute == minuteIf ) {
     run("Model mengingatkan user agar tidak lupa sholat magrib dan makan malam")  
     .then(res => {
       let cleanedRes = res.replace(/\n/g, "");
