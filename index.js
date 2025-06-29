@@ -11,6 +11,7 @@ let id = process.env.ID_TELE
 let minuteIf = Math.round(Math.random()*9)
 let secondsIf = Math.floor(Math.random()*59)
 
+console.log(`AI tereksekusi di menit ke ${minuteIf}`)
 setInterval(() => {
   let date = new Date()
   let hour = date.getHours()
@@ -18,17 +19,17 @@ setInterval(() => {
   let seconds = date.getSeconds()
   let day = date.getDay()
   //eksekusi
-  if(minute%5 == 1) {
-    run("")
-    .then(res => console.log("AI berhasil tersambung pada pukul " + hour + ":" + minute))
-    .catch(err => {
-      console.log("AI gagal tersambung pada pukul " + hour + ":" + minute)
-      console.log(err)
-    })
-    }
+  // if(minute%5 == 1) {
+  //   run("")
+  //   .then(res => console.log("AI berhasil tersambung pada pukul " + hour + ":" + minute))
+  //   .catch(err => {
+  //     console.log("AI gagal tersambung pada pukul " + hour + ":" + minute)
+  //     console.log(err)
+  //   })
+  //   }
   // tidur 
-  if(hour == 0 && minute == 10+minuteIf) {
-    run("Model bertanya kepada user sedang berbuat apa ")
+  if(hour == 0 && minute == minuteIf) {
+    run("Buatkan sapaan kasual dalam bahasa Indonesia untuk Rian dengan menanyakan aktivitasnya saat ini, seperti 'Rian, lagi ngapain?'")
     .then(res => {
       let cleanedRes = res.replace(/\n/g, "");
       cleanedRes = res.replace(/\s+/g," ").trim()
@@ -55,7 +56,7 @@ setInterval(() => {
     day = 7
   }
   //selamat pagi 
-  else if(hour == 9 && minute == (30+minuteIf)) {
+  else if(hour == 9 && minute == (minuteIf)) {
     run("Model memberikan ucapan selamat pagi ke user dan memberikan semangat kepada user serta bertanya kepada user lagi ngapain")  
     .then(res => {
       let cleanedRes = res.replace(/\n/g, "");

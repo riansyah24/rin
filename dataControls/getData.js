@@ -1,7 +1,7 @@
 import supabase from "../database.js";
 
 export async function getData() {
-  let getData = await supabase.from("Lulu").select();
+  let getData = await supabase.from("Rinara").select();
   let data = getData.data;
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < (data.length - i - 1); j++) {
@@ -12,14 +12,9 @@ export async function getData() {
         }
       }
   }
-  const dataLulu= await supabase.from('Lulu').select('*').eq('role', 'model')
-  
-  let datas = [{
-    role:"user",
-    text:"Nama saya rian dan saya pria"
-  }]
+  const datas= await supabase.from('Rinara').select('*').eq('role', 'model')
 
-  return datas.map(data => {
+  return data.map(data => {
     let ai = {
       role:data.role,
       parts:[{
